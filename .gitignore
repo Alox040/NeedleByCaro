@@ -3,4 +3,7 @@ node_modules
 out
 .env*.local
 *.log
-.DS_Store
+.DS_Storeui8/*.fig
+ui8/*.zip
+ui8/*.xd
+ui8/*.sketch
