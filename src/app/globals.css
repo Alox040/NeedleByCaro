@@ -51,7 +51,7 @@
   --heading-rgb: 15 23 34;
 
   --shell-max: 72rem;
-  --section-y: clamp(3.5rem, 8vw, 6rem);
+  --section-y: clamp(4.5rem, 10vw, 8rem);
   --gutter-x: clamp(1.25rem, 4vw, 2.5rem);
 }
 

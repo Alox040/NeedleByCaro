@@ -30,7 +30,7 @@ export function ArtistCard({
 
   return (
     <div
-      className={`group flex flex-col gap-0 overflow-hidden rounded-forge border border-forge-border/55 bg-section lg:flex-row ${
+      className={`group flex flex-col gap-0 overflow-hidden rounded-forge border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md lg:flex-row ${
         flip ? "lg:flex-row-reverse" : ""
       }`}
     >
@@ -86,7 +86,7 @@ export function ArtistCard({
               {specialities.map((s) => (
                 <li
                   key={s}
-                  className="rounded-sm border border-forge-border/70 bg-surface/60 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.1em] text-muted"
+                  className="rounded-sm border border-gray-200 bg-gray-50 px-3 py-1 font-mono text-[11px] uppercase tracking-[0.1em] text-muted"
                 >
                   {s}
                 </li>

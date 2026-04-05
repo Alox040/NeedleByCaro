@@ -4,7 +4,7 @@ import { site } from "@/content/site-content";
 
 export function ArtistsSection() {
   return (
-    <section id={site.artists.id} className="border-t border-forge-border/45 px-gutter py-section scroll-mt-24">
+    <section id={site.artists.id} className="border-t border-gray-200 px-gutter py-section scroll-mt-24">
       <div className="mx-auto max-w-shell">
         <SectionHeading
           eyebrow={site.artists.eyebrow}

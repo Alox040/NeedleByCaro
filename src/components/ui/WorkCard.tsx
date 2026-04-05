@@ -24,7 +24,7 @@ export function WorkCard({ title, category, src, alt, href }: WorkCardProps) {
   );
 
   const cls =
-    "group block overflow-hidden rounded-forge border border-forge-border/55 bg-surface/30 transition-colors hover:border-forge-accent/50";
+    "group block overflow-hidden rounded-forge border border-gray-200 bg-white shadow-sm transition-shadow transition-colors hover:border-forge-accent/50 hover:shadow-md";
 
   if (href) {
     return (

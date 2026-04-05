@@ -11,7 +11,7 @@ export function ProcessSection() {
   return (
     <section
       id={site.process.id}
-      className="border-t border-forge-border/45 px-gutter py-section scroll-mt-24"
+      className="border-t border-gray-200 px-gutter py-section scroll-mt-24"
     >
       <div className="mx-auto max-w-shell">
         <div className="mb-10 flex flex-col justify-between gap-6 md:mb-14 md:flex-row md:items-end">
@@ -27,19 +27,19 @@ export function ProcessSection() {
         </div>
 
         {/* Desktop: Snake 3+3 / Mobile: vertikale Timeline */}
-        <div className="hidden lg:block">
+        <div className="hidden overflow-hidden rounded-forge border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md lg:block">
           <ProcessRow steps={row1} startIndex={0} direction="ltr" />
 
           {/* Verbindung zwischen Zeile 1 und 2 */}
           <div className="relative my-0 flex justify-end pr-[calc(100%/3/2)]">
-            <div className="h-8 w-px bg-forge-border/55" />
+            <div className="h-8 w-px bg-gray-200" />
           </div>
 
           <ProcessRow steps={row2} startIndex={3} direction="rtl" />
         </div>
 
         {/* Mobile */}
-        <div className="flex flex-col gap-0 lg:hidden">
+        <div className="flex flex-col gap-0 rounded-forge border border-gray-200 bg-white px-6 py-2 shadow-sm transition-shadow hover:shadow-md lg:hidden">
           {steps.map((step, i) => (
             <MobileStep key={step.title} step={step} index={i} total={steps.length} />
           ))}
@@ -69,7 +69,7 @@ function ProcessRow({
   return (
     <div className="relative grid grid-cols-3">
       {/* Verbindungslinie */}
-      <div className="absolute left-0 right-0 top-[2.75rem] h-px bg-forge-border/55" />
+      <div className="absolute left-0 right-0 top-[2.75rem] h-px bg-gray-200" />
 
       {steps.map((step, pos) => {
         const idx = getIndex(pos);
@@ -81,12 +81,12 @@ function ProcessRow({
           <div
             key={step.title}
             className={`relative flex flex-col gap-5 p-6 ${
-              isFirst ? "" : "border-l border-forge-border/45"
+              isFirst ? "" : "border-l border-gray-200"
             }`}
           >
             {/* Step-Dot auf der Linie */}
             <div className="relative z-10 flex items-center gap-3">
-              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border border-forge-accent/55 bg-surface font-mono text-xs font-medium tracking-[0.14em] text-forge-accent">
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border border-forge-accent/55 bg-white font-mono text-xs font-medium tracking-[0.14em] text-forge-accent shadow-sm">
                 {num}
               </span>
               {/* Pfeil-Indikator auf dem letzten Element einer Reihe */}
@@ -139,10 +139,10 @@ function MobileStep({
     <div className="relative flex gap-5 py-6">
       {/* Timeline-Linie links */}
       <div className="flex flex-col items-center">
-        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border border-forge-accent/55 bg-surface font-mono text-xs font-medium tracking-[0.12em] text-forge-accent">
+        <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-sm border border-forge-accent/55 bg-white font-mono text-xs font-medium tracking-[0.12em] text-forge-accent shadow-sm">
           {num}
         </span>
-        {!isLast && <div className="mt-2 flex-1 w-px bg-forge-border/55" />}
+        {!isLast && <div className="mt-2 flex-1 w-px bg-gray-200" />}
       </div>
 
       {/* Inhalt */}

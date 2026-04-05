@@ -82,7 +82,7 @@ export function TrustSection() {
   return (
     <section
       id={site.trust.id}
-      className="border-t border-forge-border/45 px-gutter py-section scroll-mt-24"
+      className="border-t border-gray-200 px-gutter py-section scroll-mt-24"
     >
       <div className="mx-auto max-w-shell">
         <SectionHeading
@@ -91,14 +91,14 @@ export function TrustSection() {
         />
 
         {/* Desktop: 5 Spalten mit vertikalen Dividers */}
-        <div className="hidden divide-x divide-forge-border/45 border border-forge-border/45 bg-section lg:grid lg:grid-cols-5">
+        <div className="hidden divide-x divide-gray-200 border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md lg:grid lg:grid-cols-5">
           {items.map((item) => (
             <TrustItem key={item.icon} item={item} />
           ))}
         </div>
 
         {/* Mobile: vertikale Liste mit horizontalen Dividers */}
-        <div className="flex flex-col divide-y divide-forge-border/45 border border-forge-border/45 bg-section lg:hidden">
+        <div className="flex flex-col divide-y divide-gray-200 border border-gray-200 bg-white shadow-sm transition-shadow hover:shadow-md lg:hidden">
           {items.map((item) => (
             <TrustItem key={item.icon} item={item} mobile />
           ))}
@@ -115,13 +115,13 @@ type TrustItem = (typeof site.trust.items)[number];
 function TrustItem({ item, mobile = false }: { item: TrustItem; mobile?: boolean }) {
   return (
     <div
-      className={`group flex flex-col gap-5 p-6 transition-colors hover:bg-surface/60 ${
+      className={`group flex flex-col gap-5 p-6 transition-colors hover:bg-gray-50 ${
         mobile ? "flex-row items-start gap-5" : ""
       }`}
     >
       {/* Icon */}
       <div
-        className={`flex shrink-0 items-center justify-center rounded-sm border border-forge-border/70 bg-surface/40 text-forge-accent transition-colors group-hover:border-forge-accent/40 group-hover:text-forge-accent ${
+        className={`flex shrink-0 items-center justify-center rounded-sm border border-gray-200 bg-white text-forge-accent shadow-sm transition-shadow transition-colors group-hover:border-forge-accent/40 group-hover:text-forge-accent group-hover:shadow-md ${
           mobile ? "h-10 w-10" : "h-10 w-10"
         }`}
       >

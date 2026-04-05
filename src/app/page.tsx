@@ -20,12 +20,12 @@ export default function HomePage() {
             <div className="space-y-8 text-center lg:text-left">
               <Link
                 href={site.hero.badge.href}
-                className="mx-auto inline-flex items-center gap-3 rounded-pill border border-forge-border/70 bg-surface/50 px-3 py-2 pl-2 text-left text-xs font-medium text-muted transition-colors hover:border-forge-accent/45 hover:text-heading lg:mx-0"
+                className="mx-auto inline-flex items-center gap-3 rounded-pill border border-gray-200 bg-white px-3 py-2 pl-2 text-left text-xs font-medium text-muted shadow-sm transition-shadow transition-colors hover:border-forge-accent/45 hover:text-heading hover:shadow-md lg:mx-0"
               >
                 <span className="flex -space-x-2">
-                  <span className="h-8 w-8 rounded-full border-2 border-forge-surface bg-forge-accent-muted" />
-                  <span className="h-8 w-8 rounded-full border-2 border-forge-surface bg-forge-grey/40" />
-                  <span className="h-8 w-8 rounded-full border-2 border-forge-surface bg-forge-accent-dark/80" />
+                  <span className="h-8 w-8 rounded-full border-2 border-gray-200 bg-forge-accent/15" />
+                  <span className="h-8 w-8 rounded-full border-2 border-gray-200 bg-forge-grey/25" />
+                  <span className="h-8 w-8 rounded-full border-2 border-gray-200 bg-forge-accent/30" />
                 </span>
                 <span className="pr-1">
                   <span className="block text-[10px] uppercase tracking-wider text-muted/80">
@@ -58,7 +58,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-forge border border-forge-border/55 lg:max-w-none lg:mx-0">
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-forge border border-gray-200 shadow-sm transition-shadow hover:shadow-md lg:max-w-none lg:mx-0">
               <Image
                 src={site.hero.image.src}
                 alt={site.hero.image.alt}
@@ -67,12 +67,12 @@ export default function HomePage() {
                 sizes="(max-width:1024px) 90vw, 45vw"
                 priority
               />
-              <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-forge-border/50" />
+              <div className="pointer-events-none absolute inset-0 ring-1 ring-inset ring-gray-200" />
             </div>
           </div>
         </section>
 
-        <section className="border-y border-forge-border/45 bg-section px-gutter py-10 md:py-12">
+        <section className="border-y border-gray-200 bg-white px-gutter py-12 shadow-sm md:py-16">
           <div className="mx-auto grid max-w-shell gap-8 sm:grid-cols-3">
             {site.stats.map((s) => (
               <div key={s.label} className="text-center">
@@ -93,7 +93,7 @@ export default function HomePage() {
 
         <ProcessSection />
 
-        <section id={site.workTeaser.id} className="border-t border-forge-border/45 px-gutter py-section scroll-mt-24">
+        <section id={site.workTeaser.id} className="border-t border-gray-200 px-gutter py-section scroll-mt-24">
           <div className="mx-auto max-w-shell">
             <div className="mb-10 flex flex-col justify-between gap-6 md:mb-14 md:flex-row md:items-end">
               <SectionHeading
@@ -118,11 +118,11 @@ export default function HomePage() {
 
         <section id={site.testimonial.id} className="px-gutter py-section scroll-mt-24">
           <div className="mx-auto max-w-shell">
-            <div className="rounded-forge border border-forge-border/55 bg-surface/35 p-8 md:p-12">
+            <div className="rounded-forge border border-gray-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-md md:p-12">
               <p className="font-display text-xl font-medium leading-relaxed text-heading md:text-2xl">
                 {site.testimonial.quote}
               </p>
-              <div className="mt-8 border-t border-forge-border/55 pt-6">
+              <div className="mt-8 border-t border-gray-200 pt-6">
                 <p className="font-display text-sm font-bold uppercase tracking-wide text-forge-accent">
                   {site.testimonial.name}
                 </p>
@@ -151,7 +151,7 @@ export default function HomePage() {
         </section>
 
         {/* Final CTA Band — kein Gradient, kein Druck */}
-        <section className="border-t border-forge-border/45 px-gutter pb-section pt-section">
+        <section className="border-t border-gray-200 px-gutter pb-section pt-section">
           <div className="mx-auto max-w-shell">
             <div className="flex flex-col gap-10 lg:flex-row lg:items-end lg:justify-between">
               {/* Statement */}
@@ -172,7 +172,7 @@ export default function HomePage() {
                 <Button href={site.ctaBand.cta.href} variant="primary" className="self-start lg:self-auto">
                   {site.ctaBand.cta.label}
                 </Button>
-                <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted/45">
+                <p className="font-mono text-[10px] uppercase tracking-[0.14em] text-muted/70">
                   {site.ctaBand.note}
                 </p>
               </div>

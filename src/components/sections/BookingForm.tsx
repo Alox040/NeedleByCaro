@@ -7,7 +7,7 @@ import { site } from "@/content/site-content";
 export function BookingForm() {
   return (
     <form
-      className="space-y-5 rounded-forge border border-forge-border/55 bg-surface/30 p-6 md:p-8"
+      className="space-y-5 rounded-forge border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-md md:p-8"
       onSubmit={(e) => {
         e.preventDefault();
       }}

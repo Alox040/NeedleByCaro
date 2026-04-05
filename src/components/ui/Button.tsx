@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 
-type Variant = "primary" | "secondary";
+type Variant = "primary" | "secondary" | "ghost";
 
 type ButtonProps = {
   href?: string;
@@ -17,9 +17,11 @@ const base =
 
 const variants: Record<Variant, string> = {
   primary:
-    "bg-forge-accent text-forge-white hover:bg-forge-accent-hover focus-visible:outline-forge-white",
+    "bg-forge-accent text-white hover:bg-forge-accent-hover focus-visible:outline-forge-white",
   secondary:
-    "border border-forge-border/90 bg-transparent text-forge-white hover:border-forge-accent hover:text-forge-accent",
+    "border border-forge-border bg-white text-heading hover:border-forge-accent/50 hover:text-forge-accent",
+  ghost:
+    "text-muted hover:bg-forge-section hover:text-heading",
 };
 
 export function Button({

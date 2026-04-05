@@ -9,11 +9,11 @@ export function SiteHeader() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="border-b border-forge-border/45 px-gutter py-5 md:py-6">
+    <header className="border-b border-gray-200 bg-white/80 px-gutter py-5 backdrop-blur md:py-6">
       <div className="mx-auto flex max-w-shell items-center justify-between gap-4">
         <Link
           href="/"
-          className="font-display text-lg font-extrabold uppercase tracking-[0.12em] text-heading"
+          className="font-display text-lg font-extrabold uppercase tracking-[0.12em] text-slate-900 transition-colors hover:text-black"
         >
           <span className="text-forge-accent">{site.brand.shortName}</span>
           <span className="ml-1 hidden sm:inline">{site.brand.logoLabel}</span>
@@ -27,7 +27,7 @@ export function SiteHeader() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-xs font-medium uppercase tracking-[0.2em] text-muted transition-colors hover:text-heading"
+              className="text-xs font-medium uppercase tracking-[0.2em] text-slate-900 transition-colors hover:text-black"
             >
               {item.label}
             </Link>
@@ -35,12 +35,12 @@ export function SiteHeader() {
         </nav>
 
         <div className="flex items-center gap-3">
-          <Button href="/booking" variant="secondary" className="hidden px-5 py-2.5 text-xs sm:inline-flex">
+          <Button href="/booking" variant="secondary" className="hidden border-gray-200 px-5 py-2.5 text-xs text-slate-900 hover:text-black sm:inline-flex">
             Anfrage stellen
           </Button>
           <button
             type="button"
-            className="flex h-10 w-10 items-center justify-center rounded-full border border-forge-border/80 text-forge-white lg:hidden"
+            className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 text-slate-900 transition-colors hover:text-black lg:hidden"
             aria-expanded={open}
             aria-label={open ? "Menü schließen" : "Menü öffnen"}
             onClick={() => setOpen((v) => !v)}
@@ -68,12 +68,12 @@ export function SiteHeader() {
       </div>
 
       {open ? (
-        <div className="mt-4 flex flex-col gap-3 border-t border-forge-border/45 px-gutter pt-4 lg:hidden">
+        <div className="mt-4 flex flex-col gap-3 border-t border-gray-200 px-gutter pt-4 lg:hidden">
           {site.nav.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="py-2 text-sm font-medium uppercase tracking-wider text-muted"
+              className="py-2 text-sm font-medium uppercase tracking-wider text-slate-900 transition-colors hover:text-black"
               onClick={() => setOpen(false)}
             >
               {item.label}

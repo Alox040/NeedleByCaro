@@ -11,7 +11,7 @@ export function ContactCard({ icon, title, line, href }: ContactCardProps) {
   return (
     <a
       href={href}
-      className="flex gap-4 rounded-forge border border-forge-border/55 bg-surface/30 p-5 transition-colors hover:border-forge-accent/50 md:p-6"
+      className="flex gap-4 rounded-forge border border-gray-200 bg-white p-5 shadow-sm transition-shadow transition-colors hover:border-forge-accent/50 hover:shadow-md md:p-6"
       target={href.startsWith("http") ? "_blank" : undefined}
       rel={href.startsWith("http") ? "noreferrer" : undefined}
     >

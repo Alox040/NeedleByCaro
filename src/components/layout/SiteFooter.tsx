@@ -3,27 +3,27 @@ import { site } from "@/content/site-content";
 
 export function SiteFooter() {
   return (
-    <footer className="border-t border-forge-border/45 px-gutter py-12 md:py-16">
+    <footer className="border-t border-gray-200 bg-gray-50 px-gutter py-14 text-gray-600 md:py-20">
       <div className="mx-auto flex max-w-shell flex-col gap-10 md:flex-row md:items-start md:justify-between">
         <div className="space-y-3">
-          <p className="font-display text-xl font-bold uppercase tracking-tight text-heading">
+          <p className="font-display text-xl font-bold uppercase tracking-tight text-gray-600">
             {site.brand.name}
           </p>
-          <p className="text-sm text-muted">{site.footer.tagline}</p>
+          <p className="text-sm text-gray-600">{site.footer.tagline}</p>
           <a
             href={`mailto:${site.footer.email}`}
-            className="text-sm text-forge-accent hover:text-forge-accent-hover"
+            className="text-sm text-gray-600 transition-colors hover:text-black"
           >
             {site.footer.email}
           </a>
         </div>
         <div className="flex flex-wrap gap-8">
           <div className="space-y-3">
-            <p className="text-xs font-bold uppercase tracking-wider text-muted">Navigation</p>
-            <ul className="space-y-2 text-sm text-primary/90">
+            <p className="text-xs font-bold uppercase tracking-wider text-gray-600">Navigation</p>
+            <ul className="space-y-2 text-sm text-gray-600">
               {site.nav.map((item) => (
                 <li key={item.href}>
-                  <Link href={item.href} className="hover:text-forge-accent">
+                  <Link href={item.href} className="transition-colors hover:text-black">
                     {item.label}
                   </Link>
                 </li>
@@ -31,11 +31,11 @@ export function SiteFooter() {
             </ul>
           </div>
           <div className="space-y-3">
-            <p className="text-xs font-bold uppercase tracking-wider text-muted">Social</p>
+            <p className="text-xs font-bold uppercase tracking-wider text-gray-600">Social</p>
             <ul className="space-y-2 text-sm">
               {site.footer.social.map((s) => (
                 <li key={s.href}>
-                  <a href={s.href} className="text-primary/90 hover:text-forge-accent" target="_blank" rel="noreferrer">
+                  <a href={s.href} className="text-gray-600 transition-colors hover:text-black" target="_blank" rel="noreferrer">
                     {s.label}
                   </a>
                 </li>
@@ -44,7 +44,7 @@ export function SiteFooter() {
           </div>
         </div>
       </div>
-      <p className="mx-auto mt-12 max-w-shell text-center text-xs text-muted/70">
+      <p className="mx-auto mt-12 max-w-shell text-center text-xs text-gray-600">
         © {new Date().getFullYear()} {site.brand.name}
       </p>
     </footer>
