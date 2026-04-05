@@ -1,0 +1,14 @@
+node_modules
+.next
+.git
+*.log
+*.zip
+*.tar
+*.rar
+*.mp4
+*.mov
+*.psd
+*.tsbuildinfo
+dist
+build
+coverage
