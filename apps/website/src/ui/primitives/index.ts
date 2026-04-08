@@ -1,0 +1,2 @@
+/** Primitive Bausteine — Platzhalter. */
+export {};
